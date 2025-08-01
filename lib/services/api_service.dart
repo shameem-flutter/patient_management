@@ -24,7 +24,7 @@ class ApiService {
 
   Future<http.Response> getBranches() async {
     final token = await getToken();
-    final url = Uri.parse("$baseUrl/BrancheList");
+    final url = Uri.parse("$baseUrl/BranchList");
     return await http.get(url, headers: {"Authorization": "Bearer $token"});
   }
 
