@@ -1,4 +1,5 @@
 # patient_management
+<<<<<<< HEAD
 
 A new Flutter project.
 
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+task 
+>>>>>>> a40518dc388f3f0b7338cf8e2666fd0f471fffa0
