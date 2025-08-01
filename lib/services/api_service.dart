@@ -31,7 +31,7 @@ class ApiService {
   Future<http.Response> getTreatmentList() async {
     final token = await getToken();
     final url = Uri.parse("$baseUrl/TreatmentList");
-    return await http.get(url, headers: {"Authorisation": "Bearer $token"});
+    return await http.get(url, headers: {"Authorization": "Bearer $token"});
   }
 
   Future<http.Response> registerPatient(Map<String, dynamic> data) async {
@@ -40,7 +40,7 @@ class ApiService {
     return await http.post(
       url,
       headers: {"Authorization": "Bearer $token"},
-      body: token,
+      body: data,
     );
   }
 }
