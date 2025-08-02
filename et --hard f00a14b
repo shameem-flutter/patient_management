@@ -1,0 +1,17 @@
+[33mde4e4f8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33mf00a14b[m HEAD@{1}: commit: feat: implemented HomeScreen
+[33mde4e4f8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{2}: Branch: renamed refs/heads/main to refs/heads/main
+[33mde4e4f8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{4}: commit: feat: added HomeProvider for fetching data
+[33m88e8f39[m HEAD@{5}: Branch: renamed refs/heads/main to refs/heads/main
+[33m88e8f39[m HEAD@{7}: commit: feat: integrated login screen with model based provider
+[33m4307338[m HEAD@{8}: Branch: renamed refs/heads/main to refs/heads/main
+[33m4307338[m HEAD@{10}: commit: feat:crreated modelclass for login response and user details
+[33m74d25d1[m HEAD@{11}: Branch: renamed refs/heads/main to refs/heads/main
+[33m74d25d1[m HEAD@{13}: commit: created the LoginScreen UI with LoginProvider
+[33mc5aa949[m HEAD@{14}: Branch: renamed refs/heads/main to refs/heads/main
+[33mc5aa949[m HEAD@{16}: commit: feat: provider state management and LoginProvider
+[33md826997[m HEAD@{17}: Branch: renamed refs/heads/main to refs/heads/main
+[33md826997[m HEAD@{19}: commit: feat: add ApiService for login, patient list and patient registration
+[33m708d65d[m HEAD@{20}: commit (merge): Merge remote changes and resolve README.md conflict
+[33m06ce086[m HEAD@{21}: Branch: renamed refs/heads/master to refs/heads/main
+[33m06ce086[m HEAD@{23}: commit (initial): set up the folder structure
