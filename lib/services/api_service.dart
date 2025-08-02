@@ -10,10 +10,12 @@ class ApiService {
 
   Future<http.Response> login(String username, String password) async {
     final url = Uri.parse("$baseUrl/Login");
-    return await http.post(
+    final response = await http.post(
       url,
       body: {"username": username, "password": password},
     );
+    print("Login Response:${response.body}");
+    return response;
   }
 
   Future<http.Response> getPatientList() async {
