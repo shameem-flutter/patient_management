@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/widgets.dart';
+import 'package:patient_management/models/login_response.dart';
 import 'package:patient_management/services/api_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -8,6 +9,9 @@ class LoginProvider extends ChangeNotifier {
 
   bool _isloading = false;
   bool get isloading => _isloading;
+
+  LoginResponse? _loginResponse;
+  LoginResponse? get loginResponse => _loginResponse;
 
   Future<bool> login(String username, String password) async {
     _isloading = true;
@@ -18,9 +22,9 @@ class LoginProvider extends ChangeNotifier {
       final data = jsonDecode(response.body);
 
       if (response.statusCode == 200 && data["status"] == true) {
-        final token = data["token"];
+        _loginResponse = LoginResponse.fromJson(data);
         final prefs = await SharedPreferences.getInstance();
-        await prefs.setString("token", token);
+        await prefs.setString("token", _loginResponse!.token);
 
         _isloading = false;
         notifyListeners();

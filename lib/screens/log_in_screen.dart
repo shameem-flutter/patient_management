@@ -101,31 +101,37 @@ class LoginScreen extends StatelessWidget {
                             obsecureText: true,
                           ),
                           SizedBox(height: 80),
-                          CustomTextButton(
-                            text: "Login",
-                            onPressed: () async {
-                              if (formKey.currentState!.validate()) {
-                                try {
-                                  final success = await provider.login(
-                                    emailController.text.trim(),
-                                    passwordController.text.trim(),
-                                  );
-                                  if (success) {
-                                    Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => HomeScreen(),
-                                      ),
-                                    );
-                                  }
-                                } catch (e) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text(e.toString())),
-                                  );
-                                }
-                              }
-                            },
-                          ),
+                          provider.isloading
+                              ? Center(child: CircularProgressIndicator())
+                              : CustomTextButton(
+                                  text: "Login",
+
+                                  onPressed: () async {
+                                    if (formKey.currentState!.validate()) {
+                                      try {
+                                        final success = await provider.login(
+                                          emailController.text.trim(),
+                                          passwordController.text.trim(),
+                                        );
+                                        if (success) {
+                                          Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  HomeScreen(),
+                                            ),
+                                          );
+                                        }
+                                      } catch (e) {
+                                        ScaffoldMessenger.of(
+                                          context,
+                                        ).showSnackBar(
+                                          SnackBar(content: Text(e.toString())),
+                                        );
+                                      }
+                                    }
+                                  },
+                                ),
                           SizedBox(height: 100),
                           TermsAndPrivacyText(),
                         ],
