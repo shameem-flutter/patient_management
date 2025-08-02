@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patient_management/providers/home_provider.dart';
 import 'package:patient_management/providers/login_provider.dart';
 import 'package:patient_management/screens/home_screen.dart';
 import 'package:patient_management/screens/log_in_screen.dart';
@@ -9,7 +10,10 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MultiProvider(
-      providers: [ChangeNotifierProvider(create: (context) => LoginProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (context) => LoginProvider()),
+        ChangeNotifierProvider(create: (context) => HomeProvider()),
+      ],
       child: MyApp(),
     ),
   );

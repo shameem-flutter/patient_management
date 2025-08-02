@@ -45,4 +45,12 @@ class ApiService {
       body: data,
     );
   }
+
+  Future<http.Response> fetchHomeData(String token) async {
+    final url = Uri.parse('$baseUrl/HomeApi');
+    return await http.get(
+      url,
+      headers: {'Authorization': 'Bearer $token', 'Accept': 'application/json'},
+    );
+  }
 }
